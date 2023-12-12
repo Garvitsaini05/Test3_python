@@ -15,7 +15,7 @@ while (WTD!=7):
 
 #FOR-1--------------------------************************
     if WTD == 1:
-        a=input("Want to add a Record: (y/n): ")
+        a=input("Want to add a Record: (y/n): ").lower()
         i=1
         while i==1:
             if a == "y":
