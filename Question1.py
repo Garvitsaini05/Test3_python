@@ -10,11 +10,7 @@ print("Enter the MENU NUMBER you want to perform...")
 WTD=int(input(":- "))
 
 while (WTD!=7):
-    print("!!....MENU....!!\n 1. Add a record.\n 2. Search a record.\n 3. Update a record.\n 4. Sort the record alphabetically.\n 5. Delete a record.\n 6. Quit.\n ")
-    print("")
-    print("Enter the MENU NUMBER you want to perform...")
-    WTD=int(input(":- "))
-    print("")
+    
 
 
 #FOR-1--------------------------************************
@@ -49,8 +45,10 @@ while (WTD!=7):
                 p=input("NAME :- ")
                 if p in phoneDirectory:
                     print(p," : ",phoneDirectory[p])
+                    print("")
                 else:
                     print("No Directory exists with this name.!!!!!")
+                    print("")
             else:
                 if len(phoneDirectory) == 0:
                     print("THE DIRECTORY IS EMPTY...")
@@ -75,6 +73,16 @@ while (WTD!=7):
 
 
 #FOR-4--------------------------************************
+    if WTD == 4:
+        if len(phoneDirectory) == 0:
+            print("The directory is empty....")
+            print("")
+        else:
+            mykeys=list(phoneDirectory.keys())
+            mykeys.sort()
+            sorted_directory={i:phoneDirectory[i] for i in mykeys}
+            print("Sorted REcord is :- ",sorted_directory)
+            print("")
 
 
 
@@ -89,7 +97,7 @@ while (WTD!=7):
             else:
                 print("Contact not found in Directory")
 
-            print("Updated DATA")
+            print("Record deleted")
             print(phoneDirectory)
             print("")
         else:
@@ -105,8 +113,7 @@ while (WTD!=7):
         print("Terminating..........")
         break
 
-        print("!!....MENU....!!\n 1. Add a record.\n 2. Search a record.\n 3. Update a record.\n 4. Sort the record alphabetically.\n 5. Delete a record.\n 6. Quit.\n ")
-        print("")
-        print("Enter the MENU NUMBER you want to perform...")
-        WTD=int(input(":- "))
-        print("")
+    print("!!....MENU....!!\n 1. Add a record.\n 2. Search a record.\n 3. Update a record.\n 4. Sort the record alphabetically.\n 5. Delete a record.\n 6. Quit.\n ")
+    print("")
+    print("Enter the MENU NUMBER you want to perform...")
+    WTD=int(input(":- "))
