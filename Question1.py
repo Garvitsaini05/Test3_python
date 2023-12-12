@@ -10,6 +10,11 @@ print("Enter the MENU NUMBER you want to perform...")
 WTD=int(input(":- "))
 
 while (WTD!=7):
+    print("!!....MENU....!!\n 1. Add a record.\n 2. Search a record.\n 3. Update a record.\n 4. Sort the record alphabetically.\n 5. Delete a record.\n 6. Quit.\n ")
+    print("")
+    print("Enter the MENU NUMBER you want to perform...")
+    WTD=int(input(":- "))
+    print("")
 
 
 #FOR-1--------------------------************************
@@ -68,6 +73,11 @@ while (WTD!=7):
             print(phoneDirectory)
             print("")
 
+
+#FOR-4--------------------------************************
+
+
+
 #FOR-5--------------------------************************
     if WTD == 5:
         delete=input("DELETE SOMETHING.........??? (y/n):- ")
@@ -86,19 +96,8 @@ while (WTD!=7):
             print("Okay")
         print("")
 
-#FOR-4--------------------------************************
-    if WTD == 4:
-        mykeys=list(phoneDirectory.keys())
-        
-        sorted_directory={i:phoneDirectory[i] for i in mykeys}
-        print(sorted_directory)
 
-
-    print("!!....MENU....!!\n 1. Add a record.\n 2. Search a record.\n 3. Update a record.\n 4. Sort the record alphabetically.\n 5. Delete a record.\n 6. Quit.\n ")
-    print("")
-    print("Enter the MENU NUMBER you want to perform...")
-    WTD=int(input(":- "))
-    print("")
+    
     
 
 #FOR-6--------------------------************************
